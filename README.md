@@ -1,72 +1,92 @@
-# Google AI Experience - Interactive Demo
+# 🚀 Google AI 3D UI – Interactive Experience
 
-A sleek and modern interactive demo showcasing a Google AI-inspired user interface with dark/light theme support.
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen)](#)
+[![Dark/Light Mode](https://img.shields.io/badge/Theme-Dark%20%2F%20Light-blueviolet)](#)
+
+> **A stunning, interactive Google-inspired AI UI demo with 3D animated backgrounds, smooth dark/light theme switching, and modern responsive design. Experience the future of web interfaces!**
 
 ![Google AI Experience Demo Preview](https://raw.githubusercontent.com/pranavisback/Simple-Project/main/preview.png)
 
-## 🚀 Features
+---
 
-- **Interactive Background**: Animated background powered by Vanta.js that responds to mouse movement.
-- **Dark/Light Theme**: Toggle between dark and light modes with a persistent preference.
-- **Responsive Design**: Fully responsive layout that works on all devices.
-- **Smooth Page Transitions**: Elegant fade transitions between pages.
-- **Modern UI**: Google-inspired design aesthetics with cards and gradients.
-- **Animations**: Subtle animations on cards and links to improve user experience.
+## ✨ Features
 
-## 📖 Pages
+- 🎨 **3D Animated Background**: Eye-catching animated spheres for a futuristic look
+- 🌗 **Dark/Light Theme**: Instantly switch between beautiful dark and light modes
+- 📱 **Fully Responsive**: Looks great on mobile, tablet, and desktop
+- ⚡ **Smooth Page Transitions**: Elegant fade effects for seamless navigation
+- 🧩 **Modern Google-Inspired UI**: Clean cards, gradients, and subtle animations
+- 🖱️ **Interactive Elements**: Engaging hover and click effects
 
-- **Home**: Overview of AI capabilities
-- **About**: Information about the project
-- **Pricing**: Example pricing tiers
-- **Contact**: Contact information
+---
 
-## 🛠️ Technologies
+## 📄 Pages
 
-- HTML5
-- CSS3 (with CSS variables for theming)
-- Vanilla JavaScript
-- Vanta.js for the animated background
-- Responsive design principles
+- **Home** – Discover AI features
+- **About** – Project background
+- **Pricing** – Example pricing tiers
+- **Contact** – Get in touch
 
-## 🔍 Preview
+---
 
-### Dark Mode
-![Dark Mode](https://via.placeholder.com/400x200?text=Dark+Mode)
+## 🛠️ Built With
 
-### Light Mode
-![Light Mode](https://via.placeholder.com/400x200?text=Light+Mode)
+- **HTML5**
+- **CSS3** (with CSS variables for theming)
+- **Vanilla JavaScript**
+- **Vanta.js** for animated backgrounds
 
-## 🚀 Getting Started
+---
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/pranavisback/Simple-Project/Google-ai-fake.git
-   ```
+## 🌗 Theme Preview
 
-2. Open `index.html` in your browser or use a local server:
-   ```bash
-   # If you have Python installed:
-   python -m http.server
-   ```
+<table>
+<tr>
+<td align="center"><b>Dark Mode</b><br><img src="https://via.placeholder.com/400x200?text=Dark+Mode" width="300"></td>
+<td align="center"><b>Light Mode</b><br><img src="https://via.placeholder.com/400x200?text=Light+Mode" width="300"></td>
+</tr>
+</table>
 
-3. Navigate to the site and explore!
+---
+
+## 🚦 Quick Start
+
+```bash
+# 1. Clone the repository
+ git clone https://github.com/pranavisback/Google_AI_3D_UI.git
+
+# 2. Open index.html in your browser
+
+# Or use a local server (recommended for best experience)
+python -m http.server
+```
+
+---
 
 ## 📱 Responsive Design
 
-The site is fully responsive and optimized for:
-- Mobile phones
-- Tablets
-- Desktops
-- Large screens
+- Mobile-first, adapts to all screen sizes
+- Touch-friendly navigation and cards
+
+---
 
 ## 🎨 Theme Switching
 
-The theme toggle in the navigation bar allows users to switch between dark and light modes. The preference is saved using localStorage for a persistent experience.
+- Toggle in the navbar for instant dark/light mode
+- Remembers your preference automatically
 
-## 👨‍💻 Created By
+---
 
-Pranav Pawar
+## 👤 Author
+
+**Pranav Pawar**
+
+- [GitHub](https://github.com/pranavisback)
+- [Email](mailto:pranav647p@gmail.com)
+
+---
 
 ## 📜 License
 
-MIT License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
