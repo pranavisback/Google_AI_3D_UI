@@ -6,7 +6,7 @@
 
 > **A stunning, interactive Google-inspired AI UI demo with 3D animated backgrounds, smooth dark/light theme switching, and modern responsive design. Experience the future of web interfaces!**
 
-![Google AI Experience Demo Preview](https://raw.githubusercontent.com/pranavisback/Simple-Project/main/preview.png)
+![Google AI Experience Demo Preview](https://pranavisback.github.io/Google_AI_3D_UI/)
 
 ---
 
@@ -36,19 +36,6 @@
 - **CSS3** (with CSS variables for theming)
 - **Vanilla JavaScript**
 - **Vanta.js** for animated backgrounds
-
----
-
-## 🌗 Theme Preview
-
-<table>
-<tr>
-<td align="center"><b>Dark Mode</b><br><img src="https://via.placeholder.com/400x200?text=Dark+Mode" width="300"></td>
-<td align="center"><b>Light Mode</b><br><img src="https://via.placeholder.com/400x200?text=Light+Mode" width="300"></td>
-</tr>
-</table>
-
----
 
 ## 🚦 Quick Start
 
