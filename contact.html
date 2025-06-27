@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Google AI Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+    fetch('component/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Add smooth transition for nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            document.body.style.opacity = 0;
+            setTimeout(() => { window.location.href = href; }, 200);
+          });
+        });
+      });
+    </script>
+    <div class="animated-background">
+        <div class="gradient-sphere sphere1"></div>
+        <div class="gradient-sphere sphere2"></div>
+        <div class="gradient-sphere sphere3"></div>
+    </div>
+    <main class="content">
+        <h1>Contact</h1>
+        <p><strong>Name:</strong> Pranav Pawar</p>
+        <p><strong>Phone No:</strong> 1234567899</p>
+        <p><strong>Email:</strong> pranav647p@gmail.com</p>
+    </main>
+    <script src="themeToggle.js"></script>
+    <script>
+    document.body.style.transition = 'opacity 0.3s';
+    document.body.style.opacity = 1;
+    </script>
+</body>
+</html>

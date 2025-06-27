@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AI Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <script>
+    fetch('component/navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Add smooth transition for nav links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            document.body.style.opacity = 0;
+            setTimeout(() => { window.location.href = href; }, 200);
+          });
+        });
+      });
+    </script>
+
+    <div id="vanta-bg" class="animated-background"></div>
+    
+    <main class="content">
+        <h1>Discover how AI can be helpful</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <h2>Chat with Gemini</h2>
+                <p>Your personal, proactive AI assistant</p>
+            </div>
+            <div class="product-card">
+                <h2>AI Mode</h2>
+                <p>Ask anything, any way, in Google Search</p>
+            </div>
+            <div class="product-card">
+                <h2>NotebookLM</h2>
+                <p>The ultimate tool for understanding</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="script.js"></script>
+    <script src="themeToggle.js"></script>
+    <script>
+    document.body.style.transition = 'opacity 0.3s';
+    document.body.style.opacity = 1;
+    </script>
+</body>
+</html>
