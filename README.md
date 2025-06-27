@@ -6,7 +6,8 @@
 
 > **A stunning, interactive Google-inspired AI UI demo with 3D animated backgrounds, smooth dark/light theme switching, and modern responsive design. Experience the future of web interfaces!**
 
-![Google AI Experience Demo Preview](https://pranavisback.github.io/Google_AI_3D_UI/)
+Curious to see it in action?  
+👉 [**View the Live Preview**](https://pranavisback.github.io/Google_AI_3D_UI/) – Explore the interactive 3D UI right in your browser!
 
 ---
 
