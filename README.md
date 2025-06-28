@@ -5,7 +5,6 @@
 [![Dark/Light Mode](https://img.shields.io/badge/Theme-Dark%20%2F%20Light-blueviolet)](#)
 
 > **A stunning, interactive Google-inspired AI UI demo with 3D animated backgrounds, smooth dark/light theme switching, and modern responsive design. Experience the future of web interfaces!**
-## 🌐 Live Demo
 
 Curious to see it in action?  
 👉 [**View the Live Preview**](https://pranavisback.github.io/Google_AI_3D_UI/) – Explore the interactive 3D UI right in your browser!
@@ -72,3 +71,10 @@ python -m http.server
 **Pranav Pawar**
 
 - [GitHub](https://github.com/pranavisback)
+- [Email](mailto:pranav647p@gmail.com)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
