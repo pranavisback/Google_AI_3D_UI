@@ -13,7 +13,7 @@ function applyTheme(theme) {
     if (theme === 'light') {
         document.body.classList.add('light-theme');
         if (typeof initVanta === 'function') {
-            initVanta(0xf0f0f0); // Light grey for light theme
+            initVanta(0xffffff); // Full white for light theme
         }
     } else {
         document.body.classList.remove('light-theme');

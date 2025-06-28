@@ -9,6 +9,11 @@
         html {
             scroll-behavior: smooth;
         }
+        .contact-highlight {
+            font-size: 1.1em;
+            color: #4285F4;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -44,9 +49,18 @@
     
     <main class="content">
         <h1 class="main-heading">Contact</h1>
-        <p><strong>Name:</strong> Pranav Pawar</p>
-        <p><strong>Phone No:</strong> 1234567899</p>
-        <p><strong>Email:</strong> pranav647p@gmail.com</p>
+        <div class="contact-card">
+            <div class="contact-info">
+                <p><span class="contact-label">👤 Name  :</span> <b>Pranav Pawar</b></p>
+                <p><span class="contact-label">📞 Phone :</span> <a href="tel:1234567899">1234567899</a></p>
+                <p><span class="contact-label">✉️ Email  :</span> <a href="mailto:pranav647p@gmail.com">pranav647p@gmail.com</a></p>
+            </div>
+            <div class="contact-message">
+                <p>Have a question, suggestion, or just want to say hello? <b>Drop me a line!</b></p>
+                <p>I'm always excited to connect with fellow developers, AI enthusiasts, and anyone who loves beautiful web design.</p><br>
+                <p class="contact-highlight">🚀 Let's build something amazing together!</p>
+            </div>
+        </div>
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>

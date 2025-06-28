@@ -46,27 +46,124 @@ h1 {
 }
 
 .product-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08); /* Slightly less transparent */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    padding: 2rem;
-    transition: transform 0.3s ease;
+    padding: 2.5rem; /* Increased padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    display: flex; /* Flexbox for better layout */
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space */
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px); /* More pronounced lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 .product-card h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem; /* Larger font size */
+    margin-bottom: 1.2rem;
     color: #fff;
+    text-align: center;
+    background: linear-gradient(45deg, #4285F4, #34a853);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .product-card p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9); /* Brighter text */
+    line-height: 1.8; /* Improved readability */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for feature lists */
+.product-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Allow list to take available space */
+}
+
+.product-card ul li {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.8rem;
+    padding-left: 1.8rem;
+    position: relative;
+    line-height: 1.4;
+}
+
+.product-card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.product-card ul li::before {
+    content: '✓'; /* Checkmark icon */
+    color: #34a853; /* Google Green */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Button styling */
+.product-card .button {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(45deg, #4285F4, #a0c3ff); /* Google Blue gradient */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(66, 133, 244, 0.4);
+}
+
+/* Light theme adjustments for product cards */
+.light-theme .product-card {
+    background: var(--card-bg); /* Use existing var */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Use existing shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .product-card h2 {
+    background: linear-gradient(45deg, #174ea6, #0b8043); /* Darker gradient for light theme */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.light-theme .product-card p,
+.light-theme .product-card ul li {
+    color: #2c2c2c !important; /* Dark text for light theme */
+}
+
+.light-theme .product-card ul li::before {
+    color: #0b8043; /* Darker green checkmark */
+}
+
+.light-theme .product-card .button {
+    background: linear-gradient(45deg, #174ea6, #4285F4); /* Darker blue gradient for light theme */
+    color: #fff;
+}
+
+.light-theme .product-card .button:hover {
+    box-shadow: 0 5px 15px rgba(23, 78, 166, 0.4);
 }
 
 /* Navbar styles */
@@ -196,8 +293,25 @@ body.light-theme {
     color: #202124;
 }
 
-.light-theme .product-card p {
-    color: rgba(0, 0, 0, 0.8);
+/* Light theme: non-heading text in black for readability */
+body.light-theme p,
+body.light-theme ul,
+body.light-theme ol,
+body.light-theme li,
+body.light-theme blockquote,
+body.light-theme .about-intro,
+body.light-theme .about-list,
+body.light-theme .about-list li,
+body.light-theme .about-quote,
+body.light-theme .about-thanks,
+body.light-theme .product-card p,
+body.light-theme .product-card li {
+    color: #111 !important;
+}
+
+body.light-theme blockquote {
+    border-left: 4px solid #174ea6;
+    background: none;
 }
 
 /* Main heading gradient for home page */
@@ -281,6 +395,55 @@ body.light-theme .main-heading {
 
 .light-icon {
     display: none;
+}
+
+/* Contact Page Styles */
+.contact-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 2.5em 2em;
+    max-width: 500px;
+    margin: 2em auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.contact-label {
+    font-weight: bold;
+    color: #4285F4;
+    margin-right: 0.5em;
+}
+.contact-info a {
+    color: #174ea6;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contact-info a:hover {
+    color: #ea4335;
+}
+.contact-message {
+    font-size: 1.05em;
+    color: inherit;
+}
+.contact-message .contact-highlight {
+    font-size: 1.1em;
+    color: #4285F4;
+    font-weight: bold;
+}
+body.light-theme .contact-card {
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+body.light-theme .contact-info a {
+    color: #0b8043;
+}
+body.light-theme .contact-info a:hover {
+    color: #ea4335;
 }
 
 @media (max-width: 768px) {
