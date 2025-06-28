@@ -1,9 +1,7 @@
 let vantaEffect;
 
 function initVanta(backgroundColor) {
-  if (vantaEffect) {
-    vantaEffect.destroy();
-  }
+  if (vantaEffect) vantaEffect.destroy();
   vantaEffect = VANTA.NET({
     el: "#vanta-bg",
     mouseControls: true,
@@ -13,7 +11,7 @@ function initVanta(backgroundColor) {
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    color: 0x3f84f4, // This is the color of the lines
+    color: 0x3f84f4,
     backgroundColor: backgroundColor,
     points: 10.00,
     maxDistance: 25.00,
@@ -21,5 +19,12 @@ function initVanta(backgroundColor) {
   });
 }
 
-// Initialize with default dark theme background
-initVanta(0x0);
+function setVantaTheme() {
+  const isLight = document.body.classList.contains('light-theme');
+  initVanta(isLight ? 0xf5f5f5 : 0x111111);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  setVantaTheme();
+  window.addEventListener('themechange', setVantaTheme);
+});

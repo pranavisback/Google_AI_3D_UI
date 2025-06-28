@@ -13,6 +13,28 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
+        
+        // Mobile menu toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuIcon) {
+            menuIcon.addEventListener('click', (event) => {
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('active');
+                event.stopPropagation(); // Prevent this click from propagating to the document
+            });
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !menuIcon.contains(event.target)) {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuIcon.classList.remove('active');
+                }
+            }
+        });
+
         // Add smooth transition for nav links
         document.querySelectorAll('.nav-links a').forEach(link => {
           link.addEventListener('click', function(e) {
@@ -28,7 +50,7 @@
     <div id="vanta-bg" class="animated-background"></div>
     
     <main class="content">
-        <h1>Discover how AI can be helpful</h1>
+        <h1 class="main-heading">Discover how AI can be helpful</h1>
         <div class="product-grid">
             <div class="product-card">
                 <h2>Chat with Gemini</h2>

@@ -18,6 +18,17 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
+        
+        // Mobile menu toggle
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuIcon) {
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuIcon.classList.toggle('active');
+            });
+        }
+
         // Add smooth transition for nav links
         document.querySelectorAll('.nav-links a').forEach(link => {
           link.addEventListener('click', function(e) {
@@ -29,15 +40,33 @@
         });
       });
     </script>
-    <div class="animated-background">
-        <div class="gradient-sphere sphere1"></div>
-        <div class="gradient-sphere sphere2"></div>
-        <div class="gradient-sphere sphere3"></div>
-    </div>
+    <div id="vanta-bg" class="animated-background"></div>
+    
     <main class="content">
         <h1>About</h1>
-        <p>This is a demo project showcasing a Google AI-inspired UI.</p>
+        <p class="about-intro">Welcome to <b>Google AI 3D UI</b> – where pixels meet personality and AI meets a sense of humor!</p>
+        <p>This project was built with 0% caffeine, 100% curiosity, and a sprinkle of JavaScript magic. Our AI doesn't do your homework, but it sure makes your browser look cool.</p>
+        <ul class="about-list">
+            <li>🤖 <b>AI Level:</b> Smarter than your average toaster (but still can't make toast)</li>
+            <li>🎨 <b>Design:</b> Inspired by Google, powered by imagination, and sprinkled with a dash of style</li>
+            <li>🌗 <b>Theme:</b> Switch between dark and light faster than you can say "Hey Google!"</li>
+            <li>🦾 <b>Fun Fact:</b> No actual robots were harmed in the making of this UI</li>
+            <li>💡 <b>Innovation:</b> Our code is so clean, you could eat off it (but please don't)</li>
+            <li>🎉 <b>Entertainment:</b> Hover, click, and explore – you might discover an Easter egg or two!</li>
+            <li>🚀 <b>Performance:</b> Loads faster than you can blink (unless you're a robot, then... carry on)</li>
+            <li>🧠 <b>Learning:</b> Every bug is a new feature waiting to be discovered</li>
+            <li>🌍 <b>Global:</b> Works everywhere – even on Mars (pending WiFi availability)</li>
+            <li>🦄 <b>Magic:</b> 3D backgrounds so mesmerizing, you might forget why you came here</li>
+        </ul>
+        <blockquote class="about-quote">
+            "If you find a bug, it's not a bug – it's an undocumented feature! 😄"
+        </blockquote>
+        <p class="about-thanks">Thanks for visiting! <br> <b>May your code be bug-free and your UI always beautiful.</b> ✨</p>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="script.js"></script>
     <script src="themeToggle.js"></script>
     <script>
     document.body.style.transition = 'opacity 0.3s';

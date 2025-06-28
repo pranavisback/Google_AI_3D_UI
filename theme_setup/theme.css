@@ -1,0 +1,24 @@
+/* 3D Animated Background & Theme CSS */
+.animated-background {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transition: background 0.3s;
+}
+
+body, .content {
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    background: #111;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+body.light-theme {
+    background: #f5f5f5;
+    color: #222;
+}

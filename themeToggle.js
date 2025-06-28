@@ -12,15 +12,21 @@ function getThemePreference() {
 function applyTheme(theme) {
     if (theme === 'light') {
         document.body.classList.add('light-theme');
+        if (typeof initVanta === 'function') {
+            initVanta(0xf0f0f0); // Light grey for light theme
+        }
     } else {
         document.body.classList.remove('light-theme');
+        if (typeof initVanta === 'function') {
+            initVanta(0x0); // Black for dark theme
+        }
     }
     localStorage.setItem('theme', theme);
 }
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Apply the theme 
+    // Apply the theme
     const currentTheme = getThemePreference();
     applyTheme(currentTheme);
 
